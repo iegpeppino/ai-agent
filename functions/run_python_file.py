@@ -1,5 +1,7 @@
 import os, subprocess, sys
-from datetime import time
+from config import WORKDIR
+from google.genai import types
+
 
 def run_python_file(working_directory, file_path):
 
@@ -40,4 +42,17 @@ def run_python_file(working_directory, file_path):
         response += f'\nProcess exited with code {result.returncode}'
 
     return response
-    
+
+schema_run_python_file = types.FunctionDeclaration(
+    name="run_python_file",
+    description="Runs a .py file specified in the file_path, constrained to their working directory.",
+    parameters=types.Schema(
+        type=types.Type.OBJECT,
+        properties={
+            "file_path": types.Schema(
+                type=types.Type.STRING,
+                description="The path to the file to be executed, relative to the working directory.",
+            ),
+        },
+    ),
+)
