@@ -1,4 +1,4 @@
-[lang Es](https://github.com/iegpeppino/ai-agent/blob/README.es.md)
+[lang Es](https://github.com/iegpeppino/ai-agent/blob/main/README.es.md)
 
 # AI AGENT
 ___
