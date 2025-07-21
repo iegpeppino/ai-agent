@@ -1,19 +1,30 @@
-[lang Es](https://github.com/iegpeppino/ai-agent/blob/main/README.es.md)
+[![Python](https://img.shields.io/badge/code-Python-green?logo=python)](README.md)
+[![ES](https://img.shields.io/badge/lang-ES-red?logo=translate)](README.es.md)
 
-# AI AGENT
+# AI AGENT 🤖
 ___
 
+An AI powered Python CLI tool to perform promp actions using predefined functions.
 
-### Description 
+## Description 
 
 AI agent is a CLI tool built using Google's Gemini API.
 It accepts a coding task from a prompt and chooses from
 a set of predefined functions to accomplish said task. 
+
+## Why ?
+
+We live in an age of uncertainty regarding the concept of AI. This tool helps to mitigate the general sentiment of fear towards it (that it will take all of our jobs) and helps to consolidate a thought incline torwards taking this resource as a tool that can help us in tedious daily tasks (in this case, related to software development).
+
+## Functioning
+
+The program uses the Google Gemini API to perform tasks prompted through the CLI. 
+
+The AI agent is given a list of predefined functions to perform these tasks.
 The agent uses these functions until the task is complete
 or a maximum number of tries (predefined constant) is reached.
-___
-___
-### Functions
+
+> Calls to the AI are already pre-configured for it to behave as a code review and correction helper. This configuration can be found in the _config.py_ file.
 
 This python program comes with four basic functions:
 
@@ -41,19 +52,16 @@ This python program comes with four basic functions:
 
 
 > Additional functions can be created for the program to use. They'll have to be located in the **/functions** directory, alongside the function,  a **types.FunctionDeclaration()** has to be defined and added to the list of available functions in **call_function.py** for the AI client to use. 
-___
-___
-### Requirements
+
+
+## Pre-requisites
 
 - You'll need python 3.10+ installed on your system.
 - Access to an Unix-like shell.
 - Create an account on [Google AI Studio](https://aistudio.google.com/) to generate an *API KEY*.
 
 
-___
-___
-
-### Set-Up
+## Set-Up
 
 - In the root directory, create a .env file, then store the ApiKey from Gemini:
 ```bash
@@ -70,9 +78,8 @@ source venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
-___
-___
-### Usage
+
+## Usage
 
 There's a calculator python app in the /calculator directory to be used for tests. For example, you can go into **/calculator/main.py** and modifiy the **precedence** value for the "**+**" operator and then use the agent to review and correct the code like this:
 
@@ -85,6 +92,6 @@ You may also import new code and use the agent to work with it.
 You can add a "--verbose" argument after your prompt and the program will print additional information about the prompt and response tokens. This information is useful for keeping track of your Google API usage and for considering charges to your account.
 
 
+## 🤝 Contributing
 
----
----
+Feel free to fork the repository and open a pull request to the `main` branch.
