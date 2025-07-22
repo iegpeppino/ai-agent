@@ -1,5 +1,5 @@
 [![Python](https://img.shields.io/badge/code-Python-green?logo=python)](README.md)
-[![EN](https://img.shields.io/badge/lang-ES-red?logo=translate)](README.md)
+[![EN](https://img.shields.io/badge/lang-EN-red?logo=translate)](README.md)
 
 # AI AGENT 🤖
 
